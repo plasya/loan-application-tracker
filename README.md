@@ -1,27 +1,64 @@
-# Vehicle-Loan-Project
+# 🚀 Vehicle Loan Application Tracker
 
-Vehicle Loan System
-Domain: Finance
-Objective: Simplifying and automating the vehicle loan application process.
+A responsive, modular Angular application streamlining the loan application lifecycle. Designed to simplify the borrowing experience and provide end-to-end control for both users and administrators.
 
-Project Overview:
-The Vehicle Loan System is designed to streamline the loan application process, reducing the time and effort required for both customers and banks. The project addresses the need for an online solution that covers the entire loan cycle, from application to approval. It allows users to apply for loans, check eligibility, calculate EMIs, and submit documents for verification. Meanwhile, the system gives the admin full control over loan processing, document verification, and user management.
+## 📖 Project Overview
 
-Key Features:
-User Registration & Login: Customers can register, log in, and view loan options.
-Loan Application: Users can apply for a loan after checking eligibility based on their vehicle and financial details.
-EMI Calculator: A built-in calculator helps users estimate their monthly payments based on loan amount, interest rate, and tenure.
-Document Verification: Admin verifies uploaded documents, including identification and income proofs.
-Admin Dashboard: The admin can manage user details, verify documents, and approve or reject loan applications.
-End-to-End Loan Cycle Management: Provides a complete view of customer interactions and loan status, with real-time analytics and customized reports.
-Modules:
-User Module:
+The **Vehicle Loan System** is designed to automate and optimize the loan journey for applicants and administrators alike. It eliminates paperwork, minimizes approval delays, and brings clarity to financial decisions by integrating loan application, EMI estimation, document handling, and admin control into one user-friendly platform.
 
-Register and log in to apply for loans.
-View loan offers and calculate EMIs.
-Upload documents for verification.
-Admin Module:
+## 🎯 Key Features
 
-Manage user data and loan applications.
-Verify documents and approve/reject loans.
-Access analytics and reports on loan processing.
+- 🔐 **User Authentication**: Secure user/admin login system  
+- 📝 **Loan Application Module**: Apply with personal, employment, and vehicle details  
+- 📊 **EMI Calculator**: Real-time calculation of monthly installments  
+- 📁 **Document Upload & Tracking** *(Planned)*  
+- 🧑‍💼 **Admin Dashboard**: Review applications, approve/reject loans  
+- 📈 **Data from JSON Mock API**: Sample data fetched from `assets/sample-loans.json`
+
+## 🧩 Modules Breakdown
+
+### 👥 User Module
+- Register/Login as a user  
+- Fill in loan details & submit application  
+- Use EMI calculator  
+- View application status  
+
+### 🛠️ Admin Module
+- Login as admin  
+- Review submitted applications  
+- Approve/Reject based on verification  
+- View and manage loan data  
+
+## 📸 Preview
+
+### 🔐 Login Page
+![Login Preview](./screenshotss/login.png)
+
+### 🏠 User Dashboard
+![User Dashboard](./screenshotss/dashboard.png)
+
+### 🧾 Admin Loan Details View
+![Admin Loan Details](./screenshotss/loandetails.png)
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology        |
+|--------------|-------------------|
+| Frontend     | Angular 16        |
+| UI/Styling   | Bootstrap 3, SCSS |
+| Routing      | Angular Router    |
+| Data Handling| `HttpClient`, JSON APIs |
+| Dev Tools    | VSCode, Angular CLI |
+
+## 📁 Folder Highlights
+
+```bash
+src/
+├── app/
+│   ├── login/                  # Login UI for user/admin
+│   ├── user-dashboard/         # User view with nested routes
+│   ├── loandetailapplicationn/ # Loan table + logic
+│   ├── emi-calculator/         # EMI calculation logic
+│   └── dummy-settings/         # Placeholder settings module
+└── assets/
+    └── sample-loans.json       # Mock data source
