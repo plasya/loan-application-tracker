@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>User Registraion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="loandetailapplicationn.component.css">
+</head>
+
+<body>
+    <div class="container" style="max-width: 550px;">
+  <div style="text-align: center;">
+    <h2 style="margin-bottom: 40px;"><b>Loan Details</b></h2>
+    <form role="form" class="well">
+    <div class="form-group">
+      <label for="amount">Loan Amount</label>
+      <input type="text" id="amount" [(ngModel)]="insertaLoan.loanAmount" name="loanAmount" class="form-control" placeholder="Loan Amount">
+    </div>
+
+    <div class="form-group">
+      <label for="tenure">Loan Tenure</label>
+      <input type="number" id="tenure" [(ngModel)]="insertaLoan.loanTenure" name="loanTenure" class="form-control" placeholder="Loan Tenure">
+    </div>
+
+    <div class="form-group">
+      <label for="interest">Rate of Interest</label>
+      <input type="number" id="interest" [(ngModel)]="insertaLoan.rateOfInterest" name="rateOfInterest" class="form-control" placeholder="Rate of Interest">
+    </div>
+
+    <div class="form-group text-center">
+      <button type="button" class="btn btn-primary" (click)="insertLoan()">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="goToEmployment()">Next</button>
+    </div>
+  </form>
+
+  </div>
+  <hr>
+
+  <div *ngIf="mockLoans?.length">
+    <h3 style="margin-bottom: 15px;">📄 Loan Applications</h3>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Application ID</th>
+          <th>Amount</th>
+          <th>Tenure</th>
+          <th>Interest</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of mockLoans">
+          <td>{{ loan.applicationId }}</td>
+          <td>{{ loan.loanAmount }}</td>
+          <td>{{ loan.loanTenure }} months</td>
+          <td>{{ loan.rateOfInterest }}%</td>
+          <td>{{ loan.approved ? '✅ Approved' : '⏳ Pending' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    </body>
+</html>

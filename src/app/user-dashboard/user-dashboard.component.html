@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user-dashboard.component.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+  <nav class="navbar">
+    <div class="title">🚗 Vehicle Loan Dashboard</div>
+    <div class="nav-links">
+      <a routerLink="loan-details" routerLinkActive="active">🏠 Loans</a>
+      <a routerLink="emi-calculator" routerLinkActive="active">📅 EMI Scheduler</a>
+      <a routerLink="settings" routerLinkActive="active">⚙️ Settings</a>
+      <a routerLink="/login">📕 Logout</a>
+    </div>
+  </nav>
+
+  <div class="content-area">
+    <div *ngIf="showWelcome">
+      <h1>Welcome, Lasya</h1>
+      <p>Select an option from the menu to get started.</p>
+    </div>
+    
+    <router-outlet (activate)="onRouteChange()"></router-outlet>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

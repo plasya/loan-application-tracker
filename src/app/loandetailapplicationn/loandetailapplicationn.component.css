@@ -1,0 +1,21 @@
+body {
+  .loan-table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loan-table th,
+.loan-table td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.loan-table th {
+  background-color: #eee;
+}
+
+    background-color:rgb(149, 132, 169);
+  }

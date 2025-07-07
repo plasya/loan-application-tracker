@@ -1,0 +1,37 @@
+[
+  {
+    "applicationId": "LN001",
+    "loanAmount": 250000,
+    "loanTenure": 24,
+    "rateOfInterest": 7.5,
+    "approved": true
+  },
+  {
+    "applicationId": "LN002",
+    "loanAmount": 180000,
+    "loanTenure": 36,
+    "rateOfInterest": 6.9,
+    "approved": false
+  },
+  {
+    "applicationId": "LN003",
+    "loanAmount": 300000,
+    "loanTenure": 48,
+    "rateOfInterest": 8.2,
+    "approved": true
+  },
+  {
+    "applicationId": "LN004",
+    "loanAmount": 150000,
+    "loanTenure": 12,
+    "rateOfInterest": 5.5,
+    "approved": false
+  },
+  {
+    "applicationId": "LN005",
+    "loanAmount": 220000,
+    "loanTenure": 30,
+    "rateOfInterest": 7.0,
+    "approved": true
+  }
+]
